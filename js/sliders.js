@@ -36,6 +36,10 @@
   };
 
   var getScroll = function () {
+    if (!slider.style.webkitTransform) {
+      return;
+    }
+
     var translate3d = slider.style.webkitTransform.match(/translate3d\(([^,]*)/);
     var ret = translate3d ? translate3d[1] : 0;
     return parseInt(ret, 10);
