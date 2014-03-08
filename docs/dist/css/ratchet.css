@@ -118,8 +118,9 @@ figure {
 
 hr {
   height: 0;
-  -moz-box-sizing: content-box;
-       box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 pre {
@@ -178,7 +179,9 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -270,7 +273,7 @@ a:active {
 
 .content > * {
   -webkit-transform: translateZ(0);
-      -ms-transform: translateZ(0);
+       -o-transform: translateZ(0);
           transform: translateZ(0);
 }
 
@@ -785,7 +788,7 @@ input[type="button"] {
   top: 50%;
   right: 15px;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 .table-view-cell .navigate-left > .btn,
@@ -856,7 +859,9 @@ input[type="color"] {
 }
 
 input[type="search"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0 10px;
   font-size: 16px;
   border-radius: 20px;
@@ -1014,10 +1019,10 @@ select {
           box-shadow: 0 0 15px rgba(0, 0, 0, .1);
   opacity: 0;
   -webkit-transition: all .25s linear;
-     -moz-transition: all .25s linear;
+       -o-transition: all .25s linear;
           transition: all .25s linear;
   -webkit-transform: translate3d(0, -15px, 0);
-      -ms-transform: translate3d(0, -15px, 0);
+       -o-transform: translate3d(0, -15px, 0);
           transform: translate3d(0, -15px, 0);
 }
 .popover:before {
@@ -1035,7 +1040,7 @@ select {
 .popover.visible {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 .popover .bar ~ .table-view {
@@ -1088,20 +1093,20 @@ select {
   background-color: #fff;
   opacity: 0;
   -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
-     -moz-transition:    -moz-transform .25s, opacity 1ms .25s;
+       -o-transition:      -o-transform .25s, opacity 1ms .25s;
           transition:         transform .25s, opacity 1ms .25s;
   -webkit-transform: translate3d(0, 100%, 0);
-      -ms-transform: translate3d(0, 100%, 0);
+       -o-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
 }
 .modal.active {
   height: 100%;
   opacity: 1;
   -webkit-transition: -webkit-transform .25s;
-     -moz-transition:    -moz-transform .25s;
+       -o-transition:      -o-transform .25s;
           transition:         transform .25s;
   -webkit-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 
@@ -1118,7 +1123,7 @@ select {
   font-size: 0;
   white-space: nowrap;
   -webkit-transition: all 0 linear;
-     -moz-transition: all 0 linear;
+       -o-transition: all 0 linear;
           transition: all 0 linear;
 }
 .slider .slide-group .slide {
@@ -1138,10 +1143,10 @@ select {
   border: 2px solid #ddd;
   border-radius: 20px;
   -webkit-transition-duration: .2s;
-     -moz-transition-duration: .2s;
+       -o-transition-duration: .2s;
           transition-duration: .2s;
   -webkit-transition-property: background-color, border;
-     -moz-transition-property: background-color, border;
+       -o-transition-property: background-color, border;
           transition-property: background-color, border;
 }
 .toggle .toggle-handle {
@@ -1155,10 +1160,10 @@ select {
   border: 1px solid #ddd;
   border-radius: 100px;
   -webkit-transition-duration: .2s;
-     -moz-transition-duration: .2s;
+       -o-transition-duration: .2s;
           transition-duration: .2s;
   -webkit-transition-property: -webkit-transform, border, width;
-     -moz-transition-property:    -moz-transform, border, width;
+       -o-transition-property:      -o-transform, border, width;
           transition-property:         transform, border, width;
 }
 .toggle:before {
@@ -1177,7 +1182,7 @@ select {
 .toggle.active .toggle-handle {
   border-color: #5cb85c;
   -webkit-transform: translate3d(44px, 0, 0);
-      -ms-transform: translate3d(44px, 0, 0);
+       -o-transform: translate3d(44px, 0, 0);
           transform: translate3d(44px, 0, 0);
 }
 .toggle.active:before {
@@ -1200,22 +1205,22 @@ select {
 .content.sliding {
   z-index: 2;
   -webkit-transition: -webkit-transform .4s;
-     -moz-transition:    -moz-transform .4s;
+       -o-transition:      -o-transform .4s;
           transition:         transform .4s;
   -webkit-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
 .content.sliding.left {
   z-index: 1;
   -webkit-transform: translate3d(-100%, 0, 0);
-      -ms-transform: translate3d(-100%, 0, 0);
+       -o-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
 }
 .content.sliding.right {
   z-index: 3;
   -webkit-transform: translate3d(100%, 0, 0);
-      -ms-transform: translate3d(100%, 0, 0);
+       -o-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0);
 }
 
@@ -1232,7 +1237,7 @@ select {
   color: #bbb;
   text-decoration: none;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
           transform: translateY(-50%);
 
   -webkit-font-smoothing: antialiased;
