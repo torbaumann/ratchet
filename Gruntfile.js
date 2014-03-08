@@ -130,13 +130,28 @@ module.exports = function(grunt) {
     },
 
     autoprefixer: {
-      options: {
-        browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
-      },
       core: {
+        options: {
+          browsers: ['last 2 versions', 'android 2.3', 'android 4', 'opera 12']
+        },
         src: '<%= sass.core.dest %>'
       },
+      android_theme: {
+        options: {
+          browsers: ['last 2 versions', 'android 2.3', 'android 4', 'opera 12']
+        },
+        src: '<%= sass.android_theme.dest %>'
+      },
+      ios_theme: {
+        options: {
+          browsers: ['last 2 versions']
+        },
+        src: '<%= sass.ios_theme.dest %>'
+      },
       docs: {
+        options: {
+          browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
+        },
         src: '<%= sass.docs.dest %>'
       }
     },
