@@ -69,13 +69,21 @@ module.exports = function(grunt) {
         style: 'expanded',
         unixNewlines: true
       },
-      dist: {
-        files: {
-          '<%= meta.distPath %>css/<%= pkg.name %>.css': 'sass/ratchet.scss',
-          '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css': 'sass/theme-ios.scss',
-          '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css': 'sass/theme-android.scss',
-          '<%= meta.docsAssetsPath %>css/docs.css': 'sass/docs.scss'
-        }
+      core: {
+        src: 'sass/ratchet.scss',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+      },
+      android_theme: {
+        src: 'sass/theme-android.scss',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css'
+      },
+      ios_theme: {
+        src: 'sass/theme-ios.scss',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css'
+      },
+      docs: {
+        src: 'sass/docs.scss',
+        dest: '<%= meta.docsAssetsPath %>css/docs.css'
       }
     },
 
@@ -83,16 +91,24 @@ module.exports = function(grunt) {
       options: {
         config: 'sass/.csscomb.json'
       },
-      dist: {
+      core: {
         files: {
-          'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css',
-          'dist/css/<%= pkg.name %>-theme-android.css': 'dist/css/<%= pkg.name %>-theme-android.css',
-          'dist/css/<%= pkg.name %>-theme-ios.css': 'dist/css/<%= pkg.name %>-theme-ios.css'
+          '<%= sass.core.dest %>': '<%= sass.core.dest %>'
+        }
+      },
+      android_theme: {
+        files: {
+          '<%= sass.android_theme.dest %>': '<%= sass.android_theme.dest %>'
+        }
+      },
+      ios_theme: {
+        files: {
+          '<%= sass.ios_theme.dest %>': '<%= sass.ios_theme.dest %>'
         }
       },
       docs: {
         files: {
-          'docs/assets/css/docs.css': 'docs/assets/css/docs.css'
+          '<%= sass.docs.dest %>': '<%= sass.docs.dest %>'
         }
       }
     },
@@ -118,10 +134,10 @@ module.exports = function(grunt) {
         browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
       },
       core: {
-        src: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+        src: '<%= sass.core.dest %>'
       },
       docs: {
-        src: 'docs/assets/css/docs.css'
+        src: '<%= sass.docs.dest %>'
       }
     },
 
