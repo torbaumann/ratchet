@@ -117,6 +117,9 @@ module.exports = function(grunt) {
       options: {
         browsers: ['last 2 versions', 'ie 9', 'android 2.3', 'android 4', 'opera 12']
       },
+      core: {
+        src: '<%= meta.distPath %>css/<%= pkg.name %>.css'
+      },
       docs: {
         src: 'docs/assets/css/docs.css'
       }
